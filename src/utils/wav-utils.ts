@@ -150,7 +150,7 @@ export function interleave(recBuffers: Uint8Array[][], channels: number, bitsPer
  *
  * @returns the WAV data incl. header
  */
-export function encodeWAV(samples: Uint8Array, sampleRate: number, channels: number, bitsPerSample: number): DataView {
+export function encodeWAV(samples: Uint8Array, sampleRate: number, channels: number, bitsPerSample: number): DataView<ArrayBuffer> {
 
 	var bytePerSample = bitsPerSample / 8;
 	var length = samples.length * samples.BYTES_PER_ELEMENT;
